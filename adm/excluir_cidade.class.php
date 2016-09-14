@@ -3,7 +3,7 @@
 // * Empresa     	    	: Clique Menor Preço Ltda
 // * Script      	    		: excluir_cidade.class.php
 // * Programador 	    	: Renan Toniolo Rocha
-// * Linguagem   	    	: PHP 
+// * Linguagem   	    	: PHP
 // * Objetivo	 			: Excluir uma cidade do sistema
 // * Data Criacao	    	: 29/06/2016
 // * Ultima Atualizacao : 26/07/2016
@@ -11,6 +11,7 @@
 
 include_once("bd_connection.class.php");
 
+// inicializa com banco de dados
 $bd = new bd_connection();
 
 // pego o id da cidade que vai ser excluida
