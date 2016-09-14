@@ -1,0 +1,117 @@
+/* geral */
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+	background: #DBD8CB;
+	background: url(../img/bg.jpg);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.pdd-no {
+	padding:0;
+}
+
+header {
+	background: #FFF;
+	padding: 8px;
+}
+
+.input-group-addon {
+	background: #2d93ba;
+	color: #FFF;
+	border-color: #2d93ba;
+	border-right: solid 1px #31a2cd !important;
+}
+
+.logo {
+	text-align: center;
+	margin-top: 150px;
+}
+
+.logo img {
+	max-width: 100%;
+}
+
+.navbar-inverse {
+	padding: 2px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	border-top: solid 2px transparent;
+	transition: 1s;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	border-top: solid 2px #2d93ba;
+	color: #FFF;
+}
+
+.form-control {
+	border-radius:0;
+}
+
+.container-form {
+	max-width: 380px;
+	margin:40px auto;
+}
+
+.container-form i {
+	font-size: 20px;
+}
+
+.sg-selecao {
+	margin-top: 8px;
+}
+
+.container-form .col-md-6 {
+	padding: 0;
+}
+
+.bt-enviar {
+	text-align: center;
+}
+
+.bt-enviar input {
+	background: #333;
+	color: #FFF;
+	border: 0;
+	padding: 7px;
+	text-align: center;
+	max-width: 90px;
+	cursor: pointer;
+	transition:1s;
+}
+
+.bt-enviar input:hover {
+	background: #666;
+}
+
+.form-control {
+	color: #999 !important;
+}
+
+footer {
+	text-align: center;
+	background: #2d93ba;
+	position: fixed;
+	bottom: 0;
+	padding: 10px;
+	width: 100%;
+	color: #FFF;
+}
+
+@media screen and (max-width:990px) {
+	.input-group {
+		width: 100%;
+	}
+
+	select {
+		margin-top: 10px;
+	}
+}
+
+
+
+
