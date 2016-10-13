@@ -26,7 +26,7 @@ class bd_connection{
 		$host  = "cliquebd.mysql.dbaas.com.br"; //endereço do servidor MySQL
 		$database = "cliquebd"; //nome do BD
 		$login_db = "cliquebd"; //login usado para acessar o BD
-		$senha_db = "rochas1973"; //senha usada para acessar o BD
+		$senha_db = ""; //senha usada para acessar o BD
 
 		// vamos fazer a conexão com o banco de dados
 		if ($conexao = mysql_connect("$host","$login_db","$senha_db") or die ("Não foi possivel conectar ao servidor."))
