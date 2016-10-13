@@ -6,7 +6,7 @@ header('Content-Type: text/html; charset=UTF-8');
 // * Empresa     	    		: Clique Menor Preço Ltda
 // * Script      	    			: enviarEmail.class.php
 // * Programador 	   		: Renan Toniolo Rocha
-// * Linguagem   	    	: PHP 
+// * Linguagem   	    	: PHP
 // * Objetivo	 				: classe para envio de todos os e-mails do site
 // * Data Criacao	    	: 20/04/2016
 // * Ultima Atualizacao : 26/04/2016
@@ -14,13 +14,13 @@ header('Content-Type: text/html; charset=UTF-8');
 
 
 class enviarEmail{
-	
-	
+
+
 
 	function enviarEmail(){ }
-	
-	
-	
+
+
+
 	function enviar_email_busca($Nome, $Email,$Produto,$emailWhats)
 	{
 
@@ -28,15 +28,15 @@ class enviarEmail{
 		$br = "<br>";
 		$emailsender="pesquisamenorpreco@clickmenorpreco.com.br";
 		$emailremetente    = "pesquisamenorpreco@clickmenorpreco.com.br";
-		
+
 		// para quem sera enviado
 		$emaildestinatario = $Email;
-		
-		// Assunto do Email		
+
+		// Assunto do Email
 		$assunto = "PROCURO POR ".$Produto ;
-		
+
 		// Mensagem do e-mail
-		$mensagemHTML = "<table align='center' border='0' width='600' cellspacing='0' cellpadding='0'>";	
+		$mensagemHTML = "<table align='center' border='0' width='600' cellspacing='0' cellpadding='0'>";
 		$mensagemHTML .= "<tbody>";
       		$mensagemHTML .= "<tr>";
       			$mensagemHTML .= "<td style='padding:20px' align='center'>";
@@ -89,7 +89,7 @@ class enviarEmail{
    	 		$headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
     		mail($emaildestinatario, $assunto, $mensagemHTML, $headers );
 		}
-		
+
 	}
 
 	function enviar_email_como_se_cadastrar($nome, $email_, $dd, $telefone, $cidade)
@@ -99,15 +99,15 @@ class enviarEmail{
 		$br = "<br>";
 		$emailsender="solicite@clickmenorpreco.com.br";
 		$emailremetente    = "solicite@clickmenorpreco.com.br";
-		
+
 		// para quem sera enviado
 		$emaildestinatario = "click@clickmenorpreco.com.br; rocha@clickmenorpreco.com.br";
-		
-		// Assunto do Email		
+
+		// Assunto do Email
 		$assunto = "Solicito a visita de um Representante ";
-		
+
 		// Mensagem do e-mail
-		$mensagemHTML = "<table align='center' border='0' width='600' cellspacing='0' cellpadding='0'>";	
+		$mensagemHTML = "<table align='center' border='0' width='600' cellspacing='0' cellpadding='0'>";
 		$mensagemHTML .= "<tbody>";
       		$mensagemHTML .= "<tr>";
       			$mensagemHTML .= "<td style='padding:20px' align='center'>";
@@ -160,7 +160,7 @@ class enviarEmail{
 
 		/* Montando o cabeçalho da mensagem */
 		$headers = "MIME-Version: 1.1".$quebra_linha;
-		$headers .= "Content-type: text/html; charset=iso-8859-1".$quebra_linha;
+		$headers .= "Content-type: text/html; utf-8".$quebra_linha;
 		// Perceba que a linha acima contém "text/html", sem essa linha, a mensagem não chegará formatada.
 		$headers .= "From: ".$emailsender.$quebra_linha;
 		$headers .= "Return-Path: " . $emailsender . $quebra_linha;
@@ -170,9 +170,9 @@ class enviarEmail{
    	 		$headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
     		mail($emaildestinatario, $assunto, $mensagemHTML, $headers );
 		}
-		
+
 	}
-	
+
 	function enviar_fale_conosco($nome, $email_, $assunto, $texto)
 	{
 
@@ -180,15 +180,15 @@ class enviarEmail{
 		$br = "<br>";
 		$emailsender= "fale_conosco@clickmenorpreco.com.br";
 		$emailremetente    = "fale_conosco@clickmenorpreco.com.br";
-		
+
 		// para quem sera enviado
 		$emaildestinatario = "click@clickmenorpreco.com.br; rocha@clickmenorpreco.com.br";
-		
-		// Assunto do Email		
+
+		// Assunto do Email
 		$assunto = $assunto;
-		
+
 		// Mensagem do e-mail
-		$mensagemHTML = "<table align='center' border='0' width='600' cellspacing='0' cellpadding='0'>";	
+		$mensagemHTML = "<table align='center' border='0' width='600' cellspacing='0' cellpadding='0'>";
 		$mensagemHTML .= "<tbody>";
       		$mensagemHTML .= "<tr>";
       			$mensagemHTML .= "<td style='padding:20px' align='center'>";
@@ -241,7 +241,7 @@ class enviarEmail{
 
 		/* Montando o cabeçalho da mensagem */
 		$headers = "MIME-Version: 1.1".$quebra_linha;
-		$headers .= "Content-type: text/html; charset=iso-8859-1".$quebra_linha;
+		$headers .= "Content-type: text/html; utf-8".$quebra_linha;
 		// Perceba que a linha acima contém "text/html", sem essa linha, a mensagem não chegará formatada.
 		$headers .= "From: ".$emailsender.$quebra_linha;
 		$headers .= "Return-Path: " . $emailsender . $quebra_linha;
@@ -251,9 +251,9 @@ class enviarEmail{
    	 		$headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
     		mail($emaildestinatario, $assunto, $mensagemHTML, $headers );
 		}
-		
-	}	
-	
+
+	}
+
 }
 
 ?>

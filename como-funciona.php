@@ -1,13 +1,13 @@
 <?php
-// ***************************************************************************************************************
+// *********************************************************************************
 // * Empresa     	    	: Click Menor Preço
-// * Script      	    		: solicite.php
+// * Script      	    		: como-funciona.php
 // * Programador 	   : Renan Toniolo Rocha
 // * Linguagem   	   : PHP / HTML / CSS / JavaScript
-// * Objetivo	 			: Pagina para enviar um e-mail  pedindo para ser cadastrado no sistema como associado
-// * Data Criacao	    : 05/08/2016
-// * Ultima Atualizacao : 20/08/2016
-// ****************************************************************************************************************
+// * Objetivo	 			: Pagina explicativa de como funciona o click menor preço
+// * Data Criacao	    : 03/10/2016
+// * Ultima Atualizacao : 03/10/2016
+// *********************************************************************************
 
 
 ?>
@@ -21,7 +21,7 @@
    <meta property="description" content="O site Click Menor Preço é voltado para consultas de preços em estabelecimentos dos mais variados segmentos. Para pesquisar, basta cadastrar o número de WhatsApp ou e-mail, digitar o produto que pretende comprar e a sua categoria. Pronto! Em pouco minutos já vai receber uma mensagem no WathsApp ou no e-mail com o preço do produto escolhido." >
 	<meta property="keywords" content="Click Menor Preço, Click Menor Preco, Pesquisa de Preços, Menor Preço, Melhor Preço" >
 
-	<title>Click Menor Preço | Solicite nosso Representante</title>
+	<title>Click Menor Preço | Como Funciona</title>
 	<link rel="icon" href="img/favicon.png" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/projeto.css">
@@ -48,10 +48,10 @@
 					<li>
 						<a href="lista-de-empresas.php">Lista de associados</a>
 					</li>
-					<li class="active">
+					<li>
 						<a href="solicite.php">Solicite nosso Representante</a>
 					</li>
-					<li>
+					<li class="active">
 						<a href="como-funciona.php">Como Funciona</a>
 					</li>
 					<li>
@@ -61,43 +61,31 @@
 			</nav>
 		</div>
 	</header>
-	<form name="cadastro" method="post" action="solicite.class.php" />
+
 	<div class="container">
 		<div class="logo-interna">
 			<a href="index.php">
 				<img src="img/logo-meio.png" alt="Click menor preço">
 			</a>
 		</div>
-		<section class="container-form add-input">
-		<?php if($_GET["enviar"] == true) { ?>
-		<h1>Obrigado por entrar em contato com nosso representante.</h1>
-		<?php }else{  ?>
-			<h1>Preencha o formulário abaixo, e solicite a visita do nosso representante.</h1>
-		<?php } ?>
-			<div class="input-group">
-				<input name="nome" class="form-control" placeholder="Nome Completo" required="true">
-				<input name="email" class="form-control" placeholder="Email" required="true">
+			<div class="col-md-12" >
+				<h3>O sistema do Click Menor Preço é muito prático!</h3>
+					<ol>
+						<li>O consumidor digita seu <strong>Whatsapp</strong> ou <strong>e-mail</strong> (o que preferir para as empresas entrarem em contato).</li>
+						<li>Escreve o produto que precisa.</li>
+						<li>Escolhe a categoria desejada e clica em "Pesquisar".</li>
+						<div class="img-como-funciona img-responsive">
+							<img src="img/como_funciona.png" alt="Como Funciona">
+						</div>
+						<li>Nesse exato momento, as empresas que pertencem à categoria selecionada vão receber um e-mail com as informações da pesquisa.</li>
+					</ol>
+					<br>
+					<p>E ​pronto, as empresas que tiverem o produto escolhido pelo consumidor vão entrar em contato diretamente com ele, para oferecer seus produtos ou serviços com as melhores condições!</p>
+					<p>Experimente agora mesmo, faça uma consulta clicando <a href="fale-conosco.php">aqui</a>!</p>
+					<div class="margem-40"></div>
 			</div>
-			<div class="col-md-3 col-sm-12 col-xs-12 pdd-no">
-				<div class="input-group ddd">
-					<input name="dd" class="form-control" placeholder="DD" maxlength="2" required="true">
-				</div>
-			</div>
-			<div class="col-md-9 col-sm-12 col-xs-12 pdd-no">
-				<div class="form-group">
-					<input name="telefone" class="form-control" placeholder="Telefone" required="true">
-				</div>
-			</div>
-			<div class="col-md-12 col-sm-12 col-xs-12 input-group">
-				<input name="cidade" class="form-control" placeholder="Cidade" required="true">
-			</div>
-			<div class="bt-enviar">
-				<input type="submit" value="Enviar">
-			</div>
-			<div class="margem-40"></div>
-		</section>
 	</div>
-	</form>
+
 	<footer>
 		Click Menor Preço - Todos os direitos reservados
 	</footer>

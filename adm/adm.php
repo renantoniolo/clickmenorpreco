@@ -4,7 +4,7 @@
 // * Script      	    			: adm.php
 // * Programador 	    	: Renan Toniolo Rocha
 // * Linguagem   	    	: PHP / SQL
-// * Objetivo	 				: Faz a administração do site 
+// * Objetivo	 				: Faz a administração do site
 // * Data Criacao	    	: 20/06/2016
 // * Ultima Atualizacao : 28/06/2016
 // ************************************************************************************************************************
@@ -20,10 +20,10 @@ $vet_retorno = explode("|", $sessionControl->_read(session_id()));
 $usuario_logado = $vet_retorno [2];
 
 if($sessionControl->_read(session_id()) != ''){
-	
+
 // pego a pagina que vai abrir
-$pagina = $_GET["pg"];	
-	
+$pagina = $_GET["pg"];
+
 ?>
 
 </html><!DOCTYPE html>
@@ -50,7 +50,7 @@ $pagina = $_GET["pg"];
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    
+
     <script type="text/javascript" src="js/validacaoAdm.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -119,48 +119,48 @@ $pagina = $_GET["pg"];
 
             <div class="container-fluid">
 						<!-- /Conteudo Site -->
-						<?php 
-						
+						<?php
+
 							switch($pagina){
-							
+
 								case 0:
         							include_once("home.php") ;
         						break;
-        						
+
         						case 1:
         							include_once("associados.php") ;
         						break;
-        						
+
         						case 2:
         							include_once("categorias.php") ;
         						break;
-        						
+
         						case 3:
         							include_once("cidades.php") ;
         						break;
-        						
+
         						case 4:
         							include_once("usuarios.php") ;
         						break;
-        						
+
 								case 5:
         							include_once("lista_associados.php") ;
         						break;
-        						
+
         						case 6:
         							include_once("editar_categoria.php") ;
         						break;
-        						
+
         						case 7:
         							include_once("editar_associado.php") ;
-        						break;  					
-        						
+        						break;
+
         						default:
         							include_once("home.php") ;
         						break;
-        						
+
 							} // fim do switch
-						
+
 						?>
             </div>
             <!-- /.container-fluid -->

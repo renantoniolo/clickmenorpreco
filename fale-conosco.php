@@ -4,7 +4,7 @@
 // * Script      	    		: fale-conosco.php
 // * Programador 	   : Renan Toniolo Rocha
 // * Linguagem   	   : PHP / HTML / CSS / JavaScript
-// * Objetivo	 			: Pagina para entrar em contato com click menor preço 
+// * Objetivo	 			: Pagina para entrar em contato com click menor preço
 // * Data Criacao	    : 05/08/2016
 // * Ultima Atualizacao : 20/08/2016
 // *********************************************************************************
@@ -20,7 +20,7 @@
    <meta property="title" content="Click Menor Preço" >
    <meta property="description" content="O site Click Menor Preço é voltado para consultas de preços em estabelecimentos dos mais variados segmentos. Para pesquisar, basta cadastrar o número de WhatsApp ou e-mail, digitar o produto que pretende comprar e a sua categoria. Pronto! Em pouco minutos já vai receber uma mensagem no WathsApp ou no e-mail com o preço do produto escolhido." >
 	<meta property="keywords" content="Click Menor Preço, Click Menor Preco, Pesquisa de Preços, Menor Preço, Melhor Preço" >
-	
+
 	<title>Click Menor Preço | Fale Conosco</title>
 	<link rel="icon" href="img/favicon.png" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -44,12 +44,15 @@
 				<ul class="nav navbar-nav">
 					<li>
 						<a href="index.php">Início</a>
-					</li>				
+					</li>
 					<li>
 						<a href="lista-de-empresas.php">Lista de associados</a>
 					</li>
 					<li>
 						<a href="solicite.php">Solicite nosso Representante</a>
+					</li>
+					<li>
+						<a href="como-funciona.php">Como Funciona</a>
 					</li>
 					<li class="active">
 						<a href="fale-conosco.php">Fale Conosco</a>
@@ -58,7 +61,7 @@
 			</nav>
 		</div>
 	</header>
-	<form name="contato" method="post" action="fale-conosco.class.php"  onSubmit="return validar_fale_conosco(this)" />
+	<form name="contato" method="post" action="fale-conosco.class.php" />
 	<div class="container">
 		<div class="logo-interna">
 			<a href="index.php">
@@ -71,15 +74,15 @@
 		<?php }else{  ?>
 			<h1>Preencha o formulário abaixo, que em breve entraremos em contato.</h1>
 		<?php } ?>
-			
+
 			<div class="input-group">
-				<input name="nome"  class="form-control" placeholder="Nome"> 
-				<input name="email" class="form-control" placeholder="Email"> 
+				<input name="nome"  class="form-control" placeholder="Nome" required="true">
+				<input name="email" class="form-control" placeholder="Email" required="true">
 			</div>
 			<div class="col-md-12 col-sm-12 col-xs-12 pdd-no">
-				<div class="form-group">						
-					<input name="assunto" class="form-control" placeholder="Assunto"> 
-				</div>					
+				<div class="form-group">
+					<input name="assunto" class="form-control" placeholder="Assunto" required="true">
+				</div>
 			</div>
 			<div class="col-md-12 col-sm-12 col-xs-12 input-group">
 			<div class="form-group">
@@ -91,7 +94,7 @@
 				<input type="submit" value="Enviar">
 			</div>
 			<div class="margem-40"></div>
-		</section>		
+		</section>
 	</div>
 	</form>
 	<footer>
@@ -99,7 +102,7 @@
 	</footer>
 
 	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/bootstrap.min.js"></script>
 
 </body>
 

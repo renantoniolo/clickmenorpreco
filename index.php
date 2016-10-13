@@ -27,7 +27,7 @@ $cidades = $bd->buscarCidadesCadastradas();
    <meta property="title" content="Click Menor Preço" >
    <meta property="description" content="O site Click Menor Preço é voltado para consultas de preços em estabelecimentos dos mais variados segmentos. Para pesquisar, basta cadastrar o número de WhatsApp ou e-mail, digitar o produto que pretende comprar e a sua categoria. Pronto! Em pouco minutos já vai receber uma mensagem no WathsApp ou no e-mail com o preço do produto escolhido." >
 	<meta property="keywords" content="Click Menor Preço, Click Menor Preco, Pesquisa de Preços, Menor Preço, Melhor Preço" >
-	
+
 	<title>Click Menor Preço</title>
 	<link rel="icon" href="img/favicon.png" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -60,12 +60,15 @@ $cidades = $bd->buscarCidadesCadastradas();
 				<ul class="nav navbar-nav">
 					<li class="active">
 						<a href="index.php">Início</a>
-					</li>				
+					</li>
 					<li>
 						<a href="lista-de-empresas.php">Lista de associados</a>
 					</li>
 					<li>
 						<a href="solicite.php">Solicite nosso Representante</a>
+					</li>
+					<li>
+						<a href="como-funciona.php">Como Funciona</a>
 					</li>
 					<li>
 						<a href="fale-conosco.php">Fale Conosco</a>
@@ -82,36 +85,36 @@ $cidades = $bd->buscarCidadesCadastradas();
 				</a>
 			</div>
 			<section class="container-form">
-				<div class="input-group"> 
+				<div class="input-group">
 					<span class="input-group-addon">
-						<i class="fa fa-whatsapp"></i>				
+						<i class="fa fa-whatsapp"></i>
 					</span>
 					<span class="input-group-addon">
 						<i class="fa fa-envelope-o"></i>
 					</span>
-					<input name="emailWhats" class="form-control" placeholder="WhatsApp ou e-mail"> 
+					<input name="emailWhats" class="form-control" placeholder="WhatsApp ou e-mail">
 				</div>
 				<div class="sg-selecao">
 					<div class="col-md-6 col-sm-12 col-xs-12">
-						<div class="input-group">				
-							<input name="produto" class="form-control" placeholder="Produto"> 
+						<div class="input-group">
+							<input name="produto" class="form-control" placeholder="Produto">
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12 col-xs-12">
 						<div class="form-group">
 							<select name="categoria" class="form-control" id="sel1">
 								<option value="0">CATEGORIA</option>
-								<?php 
+								<?php
 								while($linha = mysql_fetch_array($categorias))
 								{
 									$Id = $linha["ID_Categoria"];
 									$Nome = $linha["Nome"];
-								
+
 									echo "<option value='$Id'>$Nome</option>";
-							} 
+							}
 							?>
 						</select>
-					</div>					
+					</div>
 				</div>
 				<div class="sg-combo">
 					<select name="cidade" class="form-control">
@@ -121,18 +124,18 @@ $cidades = $bd->buscarCidadesCadastradas();
 						{
 									$Id_Cidade = $linha["ID_Cidade"];
 									$Nome_Cidade = $linha["Nome"];
-								
+
 									echo "<option value='$Id_Cidade' selected='selected' >$Nome_Cidade</option>";
-						} 
+						}
 						?>
 					</select>
-				</div>			
+				</div>
 				<div class="bt-enviar">
 					<input type="submit" value="Pesquisar">
 				</div>
 			</div>
 			<div class="margem-40"></div>
-		</section>		
+		</section>
 	</div>
 </form>
 <footer>
@@ -140,7 +143,7 @@ $cidades = $bd->buscarCidadesCadastradas();
 </footer>
 
 <script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>	
+<script src="js/bootstrap.min.js"></script>
 
 </body>
 
